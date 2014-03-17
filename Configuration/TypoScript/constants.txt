@@ -18,7 +18,7 @@ plugin.tx_jhsimpleyoutube {
 		height=315
 		# cat=plugin.jh_simple_youtube/enable/020; type=boolean; label=embed video with html5 by default
 		html5 = 1
-		# cat=plugin.jh_simple_youtube/file/030; type=file; label=css file
+		# cat=plugin.jh_simple_youtube/file/030; type=file; label=Path to css file
 		cssFile = EXT:jh_simple_youtube/Resources/Public/css/tx_jhsimpleyoutube.css
 	}
 }

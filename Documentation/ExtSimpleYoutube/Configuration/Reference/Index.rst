@@ -86,7 +86,7 @@ Reference
          file
 
    :Description:
-         css file
+         Path to css file
 
    :Default:
          EXT:jh_simple_youtube/Resources/Public/css/tx_jhsimpleyoutube.css
