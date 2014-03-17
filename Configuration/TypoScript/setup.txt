@@ -15,5 +15,6 @@ plugin.tx_jhsimpleyoutube {
 		width = {$plugin.tx_jhsimpleyoutube.settings.width}
 		height = {$plugin.tx_jhsimpleyoutube.settings.height}
 		html5 = {$plugin.tx_jhsimpleyoutube.settings.html5}
+		cssFile = {$plugin.tx_jhsimpleyoutube.settings.cssFile}
 	}
 }

@@ -53,7 +53,18 @@ class VideoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 		$viewAssign = array();
 
 		//add css file
-		$this->response->addAdditionalHeaderData($this->wrapCssFile(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('jh_simple_youtube').'Resources/Public/css/tx_jhsimpleyoutube.css'));
+		if(!empty($this->settings[cssFile])) {
+			$filename = $this->settings[cssFile];
+			//resolve EXT: to path
+			if (substr($filename, 0, 4) == 'EXT:') {
+				list($extKey, $local) = explode('/', substr($filename, 4), 2);
+				$filename = '';
+				if (strcmp($extKey, '') && \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded($extKey) && strcmp($local, '')) {
+					$filename = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($extKey) . $local;
+				}
+			}
+			if(!empty($filename)) $this->response->addAdditionalHeaderData($this->wrapCssFile($filename));
+		}
 
 		//get default settings from template-setup
 		$viewAssign['width'] = $this->settings[width];
