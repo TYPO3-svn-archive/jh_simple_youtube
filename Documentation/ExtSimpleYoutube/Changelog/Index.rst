@@ -32,7 +32,9 @@ ChangeLog
          0.3.0
 
    :Changes:
-         \* Added css file to constants
+         \* Moved css file from hardcoded to constants
+
+         \* Removed unused ExtensionBuilder files
 
          \* Updated manual to ReST
 
