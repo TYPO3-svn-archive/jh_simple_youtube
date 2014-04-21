@@ -29,6 +29,13 @@ ChangeLog
 
 
  - :Version:
+         0.3.1
+
+   :Changes:
+         \* Compatibility update for TYPO3 CMS 6.2
+
+
+ - :Version:
          0.3.0
 
    :Changes:
